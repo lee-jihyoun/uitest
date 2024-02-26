@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Post List</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  .post-list {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .post {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .post:last-child {
+    border-bottom: none;
+  }
+  .post-title {
+    font-weight: bold;
+  }
+  .post-actions {
+    display: flex;
+    align-items: center;
+  }
+  .post-actions span {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  .post-actions i {
+    margin-right: 5px;
+  }
+  .add-button {
+    float: right;
+    font-size: 1.2em;
+    padding: 0.2em 0.6em;
+    margin-bottom: 1em;
+  }
+</style>
+</head>
+<body>
+
+<div class="post-list">
+  <div class="header">
+    <h2>Post List</h2>
+    <button class="add-button">+</button>
+  </div>
+  <div class="post">
+    <div class="post-title">Title of the Post</div>
+    <div class="post-actions">
+      <span><i class="far fa-heart"></i>327</span>
+      <span><i class="far fa-comment"></i>32</span>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-title">Title of the Post</div>
+    <div class="post-actions">
+      <span><i class="far fa-heart"></i>300</span>
+      <span><i class="far fa-comment"></i>32</span>
+    </div>
+  </div>
+  <!-- Repeat for other posts -->
+</div>
+
+</body>
+</html>
