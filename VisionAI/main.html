@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modal Dialog Box</title>
+<style>
+  .modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .modal-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .modal-content {
+    margin-top: 20px;
+  }
+  .modal-footer {
+    text-align: right;
+    margin-top: 20px;
+  }
+  button {
+    padding: 10px 20px;
+    margin: 0 10px;
+  }
+  .alert-icon {
+    color: #ffa500; /* Orange color for the warning icon */
+    margin-right: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="modal-background">
+  <div class="modal">
+    <div class="modal-header">
+      <button onclick="closeModal()">X</button>
+    </div>
+    <div class="modal-content">
+      <p>
+        <span class="alert-icon">⚠️</span>
+        이 메시지를 통해 양식을 마스킹하는 사용이 탐지되었습니다. <br>
+        합리적인 양식 스트리밍이 가능합니다.
+      </p>
+      <h2>어떤 양식을 마스킹 하시겠습니까?</h2>
+      <button>실시간양식</button>
+      <button>녹화양식</button>
+      <h3>양식을 직접 하시겠습니까?</h3>
+      <button>예</button>
+      <button>아니오</button>
+    </div>
+    <div class="modal-footer">
+      <select>
+        <option>다양한 리스트</option>
+      </select>
+      <button>다음</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function closeModal() {
+    // Close the modal logic here
+  }
+</script>
+
+</body>
+</html>

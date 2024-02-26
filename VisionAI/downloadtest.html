@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Masking Modal</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    position: relative;
+  }
+  .modal-header {
+    background: #ffcc00;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .modal-header .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .modal-content {
+    margin-bottom: 20px;
+  }
+  .modal-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .button-group {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .button-group button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #ff8c00;
+    color: white;
+    cursor: pointer;
+  }
+  .decision-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .decision-buttons button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    background-color: #d9534f;
+    color: white;
+    cursor: pointer;
+  }
+  .dropdown-list {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  .file-list {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 100px; /* Adjust as needed */
+    overflow-y: auto;
+  }
+  .next-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <strong>⚠️</strong> 기 마스킹된 양식은 마스킹 기능 사용이 탐지됩니다.<br>
+      합리적이내 양식 스트리밍이 가능합니다.
+      <button class="close-button">×</button>
+    </div>
+    <div class="modal-content">
+      <h2>어떤 양식을 마스킹 하시겠습니까?</h2>
+      <div class="button-group">
+        <button>실시간양식</button>
+        <button>녹화양식</button>
+      </div>
+      <h2>양식을 직접 하시겠습니까?</h2>
+      <div class="decision-buttons">
+        <button>예</button>
+        <button>아니오</button>
+      </div>
+    </div>
+    <select class="dropdown-list">
+      <option>다양한 리스트</option>
+      <!-- Other options here -->
+    </select>
+    <div class="file-list">
+      <p>20230322+154355.mp4</p>
+      <p>20230322+154355+mosaic.mp4</p>
+    </div>
+    <button class="next-button">다음</button>
+  </div>
+</div>
+
+</body>
+</html>

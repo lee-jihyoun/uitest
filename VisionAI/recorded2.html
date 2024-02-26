@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UI Design</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f4f4f4;
+  }
+  .container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .header select {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .header button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .button-group {
+    margin-bottom: 20px;
+  }
+  .button-group button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+  }
+  .button-group button.active {
+    background-color: #007bff;
+    color: white;
+  }
+  .video-feed {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+    background: url('placeholder-image-url') no-repeat center center;
+    background-size: cover;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer select {
+    padding: 10px;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <select>
+      <option value="rtsp://localhost:8554/rtsp">rtsp://localhost:8554/rtsp</option>
+      <!-- Add more options here -->
+    </select>
+    <button onclick="sendUrl()">Send URL</button>
+  </div>
+  
+  <div class="button-group">
+    <button onclick="toggleActive(this)">Normal</button>
+    <button onclick="toggleActive(this)">Blur</button>
+    <button onclick="toggleActive(this)">Mosaic</button>
+    <button onclick="toggleActive(this)">Parasite</button>
+  </div>
+  
+  <div class="video-feed">
+    <!-- Image will be displayed here -->
+  </div>
+  
+  <div class="footer">
+    <select>
+      <option>URL List</option>
+      <!-- Add more options here -->
+    </select>
+    <input type="text" placeholder="Enter URL">
+  </div>
+</div>
+
+<script>
+  function sendUrl() {
+    // Add functionality to send URL
+    alert('URL sent!');
+  }
+  
+  function toggleActive(button) {
+    // Toggle button active state
+    var buttons = document.querySelectorAll('.button-group button');
+    buttons.forEach(function(btn) {
+      btn.classList.remove('active');
+    });
+    button.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

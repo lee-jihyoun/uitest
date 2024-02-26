@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modal Dialog Box</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    position: relative;
+  }
+  .modal-header {
+    color: #fff;
+    background: #f0ad4e;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .modal-content {
+    margin-bottom: 20px;
+  }
+  .modal-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .modal-content h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .modal-buttons {
+    text-align: right;
+  }
+  .modal-buttons button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #d9534f;
+    color: white;
+    cursor: pointer;
+  }
+  .modal-footer {
+    text-align: center;
+  }
+  .modal-footer img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  select, .next-button {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <strong>⚠️</strong> 기 마스킹된 양식은 마스킹 기능 사용이 탐지됩니다.<br>
+      합리적이내 양식 스트리밍이 가능합니다.
+    </div>
+    <button class="close-button">X</button>
+    <div class="modal-content">
+      <h2>어떤 양식을 마스킹 하시겠습니까?</h2>
+      <div class="modal-buttons">
+        <button>실시간양식</button>
+        <button>녹화양식</button>
+      </div>
+      <h3>양식을 직접 하시겠습니까?</h3>
+      <div class="modal-buttons">
+        <button>예</button>
+        <button>아니오</button>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <img src="path_to_your_logo.png" alt="KT DS Logo">
+      <select>
+        <option>다양한 리스트</option>
+        <!-- Add other options here -->
+      </select>
+      <button class="next-button">다음</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
